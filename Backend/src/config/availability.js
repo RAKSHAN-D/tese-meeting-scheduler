@@ -1,0 +1,6 @@
+module.exports = {
+  SLOT_INTERVAL_MINUTES: 15,
+  WORK_DAY_START_HOUR: 9,
+  WORK_DAY_END_HOUR: 18,
+  BUSINESS_DAYS: [1, 2, 3, 4, 5],
+};
