@@ -16,21 +16,25 @@ export default function ConfirmationCard({
   meetLink,
 }: ConfirmationCardProps) {
   return (
-    <section className="mx-auto w-full rounded-md border border-slate-200 bg-white px-8 py-10 text-center shadow-sm">
-      <div className="mx-auto mb-5 flex h-28 w-28 items-center justify-center rounded-full bg-[radial-gradient(circle,#ccfbf1_0%,#f0fdfa_70%)] text-5xl">
-        ??
+    <section className="mx-auto w-full rounded-md border border-slate-200 bg-white px-4 py-8 text-center shadow-sm sm:px-8 sm:py-10">
+      <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-[radial-gradient(circle,#ccfbf1_0%,#f0fdfa_70%)] text-3xl sm:h-28 sm:w-28 sm:text-5xl">
+        OK
       </div>
 
-      <h2 className="text-[44px] font-semibold tracking-tight text-[#34495e]">Booking confirmed</h2>
-      <p className="mt-3 text-[18px] leading-relaxed text-[#637381]">
+      <h2 className="text-3xl font-semibold tracking-tight text-[#34495e] sm:text-[44px]">Booking confirmed</h2>
+      <p className="mt-3 text-base leading-relaxed text-[#637381] sm:text-[18px]">
         You're booked with {attendeeName}.
         <br />
         An invitation has been emailed to you.
       </p>
 
-      <div className="mt-8 text-[44px] font-semibold text-[#2c3e50]">{dateLabel}</div>
-      <div className="text-[44px] font-semibold text-[#2c3e50]">{timeLabel}</div>
-      <div className="mt-2 text-base text-[#0d9488]">{timezoneLabel}</div>
+      <div className="mt-8 break-words text-3xl font-semibold leading-tight text-[#2c3e50] sm:text-[44px]">
+        {dateLabel}
+      </div>
+      <div className="break-words text-3xl font-semibold leading-tight text-[#2c3e50] sm:text-[44px]">
+        {timeLabel}
+      </div>
+      <div className="mt-2 text-sm text-[#0d9488] sm:text-base">{timezoneLabel}</div>
 
       <div className="mx-auto mt-8 max-w-sm border-t border-slate-100 pt-5 text-left text-sm text-[#64748b]">
         <div className="mb-2 font-medium text-[#2c3e50]">Email</div>

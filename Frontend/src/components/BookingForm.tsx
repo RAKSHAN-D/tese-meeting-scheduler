@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type FormEvent } from "react";
+﻿import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Button, Input } from "./ui";
 
 interface BookingFormValues {
@@ -87,14 +87,12 @@ export default function BookingForm({
         <div className="space-y-3 text-sm text-slate-700">
           <div>
             <p>
-              <span className="mr-2">📅</span>
-              <span className="font-semibold text-slate-900">{selectedDateTimeLabel}</span>
+              <span className="mr-2">Date & time:</span> <span className="font-semibold text-slate-900">{selectedDateTimeLabel}</span>
             </p>
             <p className="pl-6 text-xs font-medium text-teal-700">{timezoneLabel}</p>
           </div>
           <p style={{ borderTop: "1px solid #ccfbf1" }} className="pt-3">
-            <span className="mr-2">📹</span>
-            {meetLabel}
+            <span className="mr-2">Location:</span> {meetLabel}
           </p>
         </div>
       </div>
@@ -128,7 +126,7 @@ export default function BookingForm({
 
         <div className="flex flex-col gap-3 pt-1 sm:flex-row">
           <Button type="button" variant="outline" onClick={onBack} className="sm:w-auto">
-            ← Back
+            Back
           </Button>
           <Button
             type="submit"
@@ -142,3 +140,4 @@ export default function BookingForm({
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { TimeSlot } from "../types";
+﻿import type { TimeSlot } from "../types";
 import { TIMEZONE_OPTIONS, mapSlotsWithTimezone } from "../utils/timezones";
 import { Button, Select, Spinner } from "./ui";
 
@@ -49,9 +49,9 @@ export default function TimeSlotPicker({
         <h3 className="text-sm font-semibold text-slate-800">
           {formatSelectedDateLabel(selectedDate)}
         </h3>
-        <div className="min-w-[180px]">
+        <div className="w-full sm:min-w-[180px] sm:w-auto">
           <Select
-            label="🌐 Timezone"
+            label="Timezone"
             options={timezoneOptions}
             value={timezone}
             onChange={(event) => onTimezoneChange(event.target.value)}
@@ -114,10 +114,11 @@ export default function TimeSlotPicker({
             className="w-full text-white"
             style={{ background: "linear-gradient(135deg,#14b8a6,#0d9488)" }}
           >
-            Confirm time →
+            Confirm time
           </Button>
         </div>
       ) : null}
     </section>
   );
 }
+

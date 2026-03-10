@@ -20,14 +20,14 @@ interface HomePageProps {
 function StepperChooseTime() {
   return (
     <div className="mb-6 flex items-center justify-center text-xs font-semibold uppercase tracking-wide text-slate-600">
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         <div className="flex items-center gap-2">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#ff7a59] text-[#ff7a59]">
             1
           </span>
           <span>Choose Time</span>
         </div>
-        <span className="h-[2px] w-28 bg-slate-300" />
+        <span className="hidden h-[2px] w-28 bg-slate-300 sm:block" />
         <div className="flex items-center gap-2">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-slate-300 text-slate-400">
             2

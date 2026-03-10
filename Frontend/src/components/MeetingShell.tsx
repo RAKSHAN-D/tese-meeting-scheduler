@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
 
 interface MeetingShellProps {
   step: 1 | 3 | 4;
@@ -49,9 +49,9 @@ export default function MeetingShell({
               <div className="text-2xl font-bold leading-tight text-white">Product Demo</div>
               <div className="mt-1 text-sm text-[#a5d8d2]">with Climatiq Team</div>
             </div>
-            <MetaRow icon="⏱" label="Duration" value="30 minutes" />
-            <MetaRow icon="📹" label="Location" value="Google Meet" />
-            <MetaRow icon="🌍" label="Format" value="Online meeting" />
+            <MetaRow icon="TIME" label="Duration" value="30 minutes" />
+            <MetaRow icon="VIDEO" label="Location" value="Google Meet" />
+            <MetaRow icon="WEB" label="Format" value="Online meeting" />
 
             {selectedDateLabel ? (
               <div className="mt-1 rounded-[10px] border border-[#14b8a640] bg-[#14b8a61f] p-3.5">
@@ -86,4 +86,5 @@ export default function MeetingShell({
     </main>
   );
 }
+
 

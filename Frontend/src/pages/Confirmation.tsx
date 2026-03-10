@@ -13,14 +13,14 @@ interface ConfirmationPageProps {
 function StepperCompleted() {
   return (
     <div className="mb-8 flex items-center justify-center text-xs font-semibold uppercase tracking-wide text-slate-600">
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         <div className="flex items-center gap-2">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#ff7a59] text-white">
             {"\u2713"}
           </span>
           <span>Choose Time</span>
         </div>
-        <span className="h-[2px] w-28 bg-[#ff7a59]" />
+        <span className="hidden h-[2px] w-28 bg-[#ff7a59] sm:block" />
         <div className="flex items-center gap-2">
           <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#ff7a59] text-white">
             {"\u2713"}

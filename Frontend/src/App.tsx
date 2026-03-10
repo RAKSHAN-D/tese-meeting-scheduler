@@ -1,5 +1,4 @@
 import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
 import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Confirmation from "./pages/Confirmation";
