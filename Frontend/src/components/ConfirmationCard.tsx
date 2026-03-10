@@ -18,7 +18,7 @@ export default function ConfirmationCard({
   return (
     <section className="mx-auto w-full rounded-md border border-slate-200 bg-white px-4 py-8 text-center shadow-sm sm:px-8 sm:py-10">
       <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-[radial-gradient(circle,#ccfbf1_0%,#f0fdfa_70%)] text-3xl sm:h-28 sm:w-28 sm:text-5xl">
-        OK
+        🎉
       </div>
 
       <h2 className="text-3xl font-semibold tracking-tight text-[#34495e] sm:text-[44px]">Booking confirmed</h2>
