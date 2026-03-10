@@ -372,9 +372,9 @@ Set environment variables in the Vercel dashboard under **Project â†’ Settings â
 
 | Tool        | Purpose                                      |
 |-------------|----------------------------------------------|
-| Windsurf    | Primary AI coding IDE (VS Code)              |
+| VS code    | Primary AI coding IDE (Codex Plugin)               |
 | Claude      | Architecture planning, debugging             |
-| GPT-4o      | Code generation, problem solving             |
+| GPT-5.3      | Code generation, problem solving             |
 
 All prompts are logged in `PROMPT_LOG.md`.
 
