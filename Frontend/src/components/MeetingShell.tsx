@@ -27,6 +27,47 @@ export default function MeetingShell({
 }: MeetingShellProps) {
   return (
     <main className="min-h-screen bg-[#f1f5f9] px-4 py-6 md:py-10">
+      <div className="mx-auto mb-4 rounded-2xl bg-[linear-gradient(160deg,#0f2027_0%,#1a3a4a_60%,#0d3b40_100%)] p-4 text-white shadow-[0_12px_28px_rgba(15,32,39,0.2)] md:hidden">
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <div>
+            <div className="text-[11px] uppercase tracking-[1px] text-[#7ecfc4]">Meeting type</div>
+            <div className="text-lg font-bold leading-tight">Product Demo</div>
+          </div>
+          <div className="rounded-md bg-white/10 px-2.5 py-1 text-xs text-[#a5d8d2]">Step {step} of 4</div>
+        </div>
+
+        <div className="mb-3 grid grid-cols-2 gap-2 text-xs">
+          <div className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-2">
+            <div className="text-[#7ecfc4]">Duration</div>
+            <div className="mt-0.5 font-medium text-[#e2f4f0]">30 minutes</div>
+          </div>
+          <div className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-2">
+            <div className="text-[#7ecfc4]">Location</div>
+            <div className="mt-0.5 font-medium text-[#e2f4f0]">Google Meet</div>
+          </div>
+        </div>
+
+        {selectedDateLabel ? (
+          <div className="mb-3 rounded-[10px] border border-[#14b8a640] bg-[#14b8a61f] p-3">
+            <div className="mb-1 text-[11px] tracking-[0.8px] text-[#7ecfc4]">Selected time</div>
+            <div className="text-sm font-semibold text-[#e2f4f0]">{selectedDateLabel}</div>
+            {selectedTimeLabel ? (
+              <div className="mt-1 text-base font-bold text-[#14b8a6]">{selectedTimeLabel}</div>
+            ) : null}
+          </div>
+        ) : null}
+
+        <div className="flex gap-2">
+          {[1, 2, 3, 4].map((s) => (
+            <div
+              key={s}
+              className="h-1 flex-1 rounded-sm transition-all duration-300"
+              style={{ background: step >= s ? "#14b8a6" : "rgba(255,255,255,0.15)" }}
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="mx-auto flex w-full max-w-6xl overflow-hidden rounded-2xl bg-white shadow-[0_20px_60px_rgba(15,32,39,0.18),0_4px_20px_rgba(15,32,39,0.08)]">
         <aside className="relative hidden min-h-[720px] w-[290px] shrink-0 flex-col gap-7 overflow-hidden bg-[linear-gradient(160deg,#0f2027_0%,#1a3a4a_60%,#0d3b40_100%)] px-8 py-12 md:flex">
           <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-[radial-gradient(circle,rgba(20,184,166,0.18)_0%,transparent_70%)]" />
@@ -81,7 +122,7 @@ export default function MeetingShell({
           </div>
         </aside>
 
-        <section className="min-w-0 flex-1 p-5 md:p-10">{children}</section>
+        <section className="min-w-0 flex-1 p-4 sm:p-5 md:p-10">{children}</section>
       </div>
     </main>
   );
